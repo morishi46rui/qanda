@@ -10,6 +10,9 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    @question = Question.new(question_params)
+    @question.save
+    redirect_to @question
   end
 
   def edit
@@ -19,5 +22,10 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def question_params
+    params.require(:question).permit(:title, :name, :content)
   end
 end

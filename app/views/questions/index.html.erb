@@ -8,13 +8,13 @@
     <th></th>
   </tr>
   <% @questions.each do |question| %>
-  <tr>
-    <td><%= question.id %></td>
-    <td><%= question.title %></td>
-    <td><%= question.name %></td>
-    <td><%= question.content %></td>
-    <td><%= link_to 'show', question_path(question) %></td>
-  </tr>
+    <tr>
+      <td><%= question.id %></td>
+      <td><%= question.title %></td>
+      <td><%= question.name %></td>
+      <td><%= question.content %></td>
+      <td><%= link_to 'show', question_path(question) %></td>
+    </tr>
   <% end %>
 </table>
 <%=  %>

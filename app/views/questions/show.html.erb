@@ -6,6 +6,7 @@
 <% @question.answers.each do |answer| %>
   <p>Name:<br><%= answer.name %></p>
   <p>Content:<br><%= answer.content %></p>
+  <p><%= link_to 'Destroy answer', [answer.question, answer], data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' } %></p>
 <% end %>
 <h2>Add a answer</h2>
 <%= form_with model: [@question, @question.answers.build] do |form| %>
